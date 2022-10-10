@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+  --text-in-black: #E7E9F2;
+  --text-in-black-hover: #848dae;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.wrapper {
+  /* background-color: blue; */
+  position: relative;
+  width: 100%;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*=====================================================*/
+/*                        HEADER                       */
+/*=====================================================*/
+
+header {
+  background-color: black;
+  
+  width: 100%;
+  height: 80px;
+  padding: 0px 5%;
+  box-sizing: border-box;
+  
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--text-in-black);
+}
+
+header a {
+  text-decoration: none;
+  color: var(--text-in-black);
+}
+
+header h1 {
+  /* background-color: palegoldenrod; */
+  
+  flex: 1;
+}
+
+header .menu {
+  /* background-color: rgb(93, 32, 134); */
+  
+  flex: 2;
+  
+  display: flex;
+  justify-content: flex-end;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+header ul li {
+  margin: 0px 20px;
+  font-size: 14pt;
+  font-weight: 500;
+}
+
+header .menu a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width:240px) and (max-width:900px) {
+  header h1 {
+    flex: 2;
+  }
+  
+  header .menu {
+    flex: 1;
+  }
+  header ul {
+    background-image: url("img/menu.png");
+    background-size: cover;
+    width: 40px;
+    height: 40px;    
+  }
+  header li {
+    display: none;
+  }
+}
+
+/*=====================================================*/
+/*                        CONTENT                      */
+/*=====================================================*/
+
+
+.main-wrapper {
+  background-color: red;
+  
+  width: 100%;
+  height: 80%;
+}
+
+
+/*-----------------------------------------------------*/
+/*                        BANNER                       */
+/*-----------------------------------------------------*/
+
+.banner {
+  background-color: black;
+  background-image: url("img/banner-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--text-in-black);
+
+  width: 100%;
+  height: 600px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h1 {
+  font-size: 40pt;
+}
+
+.banner p {
+  font-size: 16pt;
+  width: 70%;
+
+  text-align: center;
+}
+
+/*-----------------------------------------------------*/
+/*                        BRANDS                       */
+/*-----------------------------------------------------*/
+
+.container {
+  background-color: black;
+
+  width: 100%;
+  height: 600px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.brands-wrapper {
+  background-color: black;
+  
+  height: 60%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.brand {
+  background-color: var(--text-in-black);
+  border-radius: 5px;
+
+  width: 25%;
+  height: 90%;
+  padding: 10px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand h1 {
+    font-size: 20pt;
+}
+
+.img-brand {
+  width: 90%;
+  height: 90%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.xiaomi .img-brand {
+  background-image: url("img/xiaomi.jpg");
+}
+.samsung .img-brand {
+  background-image: url("img/samsung.jpg");
+}
+.iphone .img-brand {
+  background-image: url("img/iphone.jpg");
+}
+
+.brands-wrapper + p {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20pt;
+  color: var(--text-in-black);
+}
+
+@media screen and (min-width:240px) and (max-width:900px) {
+  .container {
+    height: 1200px;
+  }
+  
+  .brands-wrapper {
+    flex-direction: column;
+    height: 80%;
+  }
+
+  .brand {
+    width: 70%;
+    margin-top: 40px;
+  }
+
+}
+
+/*-----------------------------------------------------*/
+/*                        INTRO                       */
+/*-----------------------------------------------------*/
+
+
+.intro {
+  background-color: white;
+
+  width: 100%;
+  height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  padding: 5%;
+  box-sizing: border-box;
+}
+
+.intro .img, .intro .description {
+  width: 50%;
+  height: 100%;
+
+  margin: 10px;
+}
+
+.intro .img {
+  background-color: bisque;
+  background-image: url("img/intro-img-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.intro .description {
+  padding: 24px;
+  box-sizing: border-box;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.intro p {
+  font-size: 28pt;
+  line-height: 50px;
+  margin-bottom: 6%;
+  
+}
+
+.purchase {
+  font-size: 18pt;
+  padding: 10px;
+
+  width: fit-content;
+  background-color: rgb(36, 33, 44);
+  color: var(--text-in-black);
+  border: none;
+}
+
+.purchase:hover {
+  background-color: black;
+}
+
+@media screen and (min-width:240px) and (max-width:900px) {
+  .intro {
+    flex-direction: column;
+    height: 1000px;
+  }
+
+  .intro .img, .intro .description {
+    width: 100%;
+  }
+
+}
+
+/*-----------------------------------------------------*/
+/*                        INTRO                       */
+/*-----------------------------------------------------*/
+
+footer {
+  background-color: black;
+  color: var(--text-in-black);
+
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*=====================================================*/
+/*                       SIGN IN                       */
+/*=====================================================*/
+
+.signin-wrapper {
+  border: 2px solid var(--text-in-black);
+  color: var(--text-in-black);
+  margin: 20px;
+
+  width: 40%;
+  height: 70%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 40px;
+}
+
+.signin-wrapper input[type = "text"], .signin-wrapper input[type="password"] {
+  border-radius: 10px;
+  height: 20px;
+}
+
+.signin-wrapper .sign-up {
+  text-align: center;
+  line-height: 25px;
+}
+
+.signin-wrapper a {
+  text-decoration: none;
+  color: var(--text-in-black);
+}
+
+.signin-wrapper a:hover {
+  color: var(--text-in-black-hover);
+}
+
+.signin-wrapper input[type = "submit"] {
+  font-size: 12pt;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(174, 180, 193);
+}
+
+@media screen and (min-width:240px) and (max-width:900px) {
+  .signin-wrapper {
+    width: 80%;
+    height: 40%;
+  }
+
+}
+
+/*=====================================================*/
+/*                     ADMIN/MEMBER                    */
+/*=====================================================*/
+
+.wrapper.admin-mode {
+  background-color: black;
+}
+
+.admin-header, .member-header {
+  text-align: center;
+}
+
+.admin-header a:hover, .member-header a:hover{
+  text-decoration: none;
+}
+
+.admin-header + hr, .member-header + hr {
+  margin: 5px 5%;
+}
+
+.admin-menu, .member-menu {
+  background-color: black;
+  
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1%;
+}
+
+.admin-menu a, .member-menu a {
+  color: var(--text-in-black);
+  text-decoration: none;
+}
+
+.admin-menu a:hover, .member-menu a:hover {
+  text-decoration: underline;
+}
+
+.timeline {
+  color: var(--text-in-black);
+}
+
+/*=====================================================*/
+/*                      NEW PRODUCT                    */
+/*=====================================================*/
+
+.form-wrapper {
+  color: var(--text-in-black);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-wrapper h1 {
+  margin: 10px;
+}
+
+.form-wrapper input[type="submit"] {
+  font-size: 12pt;
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+/*=====================================================*/
+/*                        MEMBER                       */
+/*=====================================================*/
+
+.wrapper.wrapper.member-mode {
+  background-color: white;
+}
+
+.member-header {
+  background-color: white;
+}
+
+.wrapper.member-mode a, .member-menu a{
+  color: black;
+}
+
+.member-menu {
+  background-color: white;
+}
+
+.main-wrapper.member-mode .container {
+  background-color: white;
+}
+.main-wrapper.member-mode h1 {
+  color: black;
+}
+
